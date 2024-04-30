@@ -17,7 +17,7 @@ function App() {
   const routers = createBrowserRouter([
 
     {
-      path:"Admin",
+      path:"authentication",
       element:<AuthLayout/>,
       errorElement:<NotFound/>,
       children:
@@ -31,7 +31,7 @@ function App() {
       ]
     },
     {
-      path:'dashboard',
+      path:'admin',
       element:(
         <AdminLayout/>
       ),
