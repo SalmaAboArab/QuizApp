@@ -31,7 +31,7 @@ function App() {
       ]
     },
     {
-      path:'admin',
+      path:'instructor',
       element:(
         <AdminLayout/>
       ),
