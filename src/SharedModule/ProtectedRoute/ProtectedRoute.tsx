@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProtectedRout() {
+export default function ProtectedRoute() {
   return (
     <div>ProtectedRouting</div>
   )
