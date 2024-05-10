@@ -8,16 +8,17 @@ import Login from './AuthModule/Login/Login'
 import Register from './AuthModule/Register/Register'
 import ForgetPassword from './AuthModule/ForgetPassword/ForgetPassword'
 import ResetPassword from './AuthModule/ResetPassword/ResetPassword'
-import ProtectedRout from './SharedModule/ProtectedRout/ProtectedRout'
-import AdminLayout from './SharedModule/AdminLaout/AdminLayout'
+import ProtectedRoute from './SharedModule/ProtectedRoute/ProtectedRoute'
 import Home from './AdminModule/Components/Home/Home'
 import ChangePassword from './AuthModule/ChangePassword/ChangePassword'
+import InstructorLayout from './SharedModule/InstructorLayout/InstructorLayout'
+import Quizzes from './InstructorModule/Components/Quizzes/Quizzes'
 
 function App() {
   const routers = createBrowserRouter([
 
     {
-      path:"authentication",
+      path:"/",
       element:<AuthLayout/>,
       errorElement:<NotFound/>,
       children:
@@ -33,12 +34,13 @@ function App() {
     {
       path:'instructor',
       element:(
-        <AdminLayout/>
+        <InstructorLayout/>
       ),
       errorElement:<NotFound/>,
       children:
       [
         {index:true,element:<Home/>},
+        {path:"quizzes",element:<Quizzes/>}
        
       ]
     }

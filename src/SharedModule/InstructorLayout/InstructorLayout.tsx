@@ -3,14 +3,14 @@ import SidBar from '../../AdminModule/Components/SidBar/SidBar'
 import NavBar from '../../AdminModule/Components/NavBar/NavBar'
 import { Outlet } from 'react-router-dom'
 
-export default function AdminLayout() {
+export default function InstructorLayout() {
   return (
     <>
-    <div className="d-flex">
-        <div>
+    <div className="w-full flex">
+        <div className='w-1/6'>
           <SidBar/>
         </div>
-        <div className="m-3 w-100">
+        <div className=" w-full ">
           <NavBar/>
           <Outlet/>
         </div>
